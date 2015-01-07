@@ -3,7 +3,7 @@
 
 <div class="starter-template">
 
-    <img id="img" src="static/img.jpg" width="640">
+    <img id="img" src="static/camera/img.jpg" width="640">
 
 </div>
 
@@ -12,8 +12,8 @@ setTimeout(updateImage, 1000);
 
 function updateImage()
 {
-  $.get("/shoot");
-  document.getElementById("img").src = "static/img.jpg?" + new Date().getTime();
+  $.get("/camera/shoot");
+  document.getElementById("img").src = "static/camera/img.jpg?" + new Date().getTime();
 
   setTimeout(updateImage, 1000);
 }
